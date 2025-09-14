@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stuti Raghuwanshi | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark blue-gray */
+            color: #E5E7EB; /* Light gray */
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.2), 0 4px 6px -4px rgba(99, 102, 241, 0.2);
+        }
+
+        .glow-button {
+            transition: all 0.3s ease;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.6);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #6366F1; /* Indigo */
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed w-full bg-gray-900/80 backdrop-blur-sm z-50 shadow-md">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-white">Stuti Raghuwanshi</div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link text-gray-300 hover:text-indigo-400">About</a>
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-indigo-400">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-indigo-400">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-indigo-400">Contact</a>
+                </nav>
+                <div class="md:hidden">
+                     <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+             <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="#about" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded">About</a>
+                <a href="#skills" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded">Skills</a>
+                <a href="#projects" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded">Projects</a>
+                <a href="#contact" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24">
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center text-center fade-in">
+            <div>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">Stuti Raghuwanshi</h1>
+                <p class="text-xl md:text-2xl text-indigo-400 mb-8">Full-Stack Developer & Tech Enthusiast</p>
+                <p class="max-w-3xl mx-auto text-gray-300 mb-8">
+                    A Computer Science undergraduate with hands-on experience in full-stack development and modern web technologies, passionate about building efficient and scalable software solutions.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="mailto:stutiraghu72@gmail.com" class="bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg glow-button hover:bg-indigo-700">Contact Me</a>
+                    <a href="https://github.com" target="_blank" class="bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg glow-button hover:bg-gray-600">GitHub</a>
+                    <a href="https://linkedin.com" target="_blank" class="bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg glow-button hover:bg-gray-600">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 fade-in">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/3 text-center">
+                    <img src="https://placehold.co/400x400/1F2937/6366F1?text=SR" alt="Stuti Raghuwanshi" class="rounded-full mx-auto shadow-lg w-64 h-64 md:w-80 md:h-80 object-cover">
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        I am a dedicated Computer Science student at VIT Bhopal University with a strong foundation in object-oriented programming, data structures, and algorithms. My journey into technology has been driven by a curiosity to solve real-world problems through code.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed mt-4">
+                        I have hands-on experience in engineering full-stack applications, from architecting responsive user interfaces with React.js to building robust server-side logic. I enjoy collaborating in team environments and am always eager to learn and apply new technologies to optimize performance and create seamless user experiences.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-gray-900/50 rounded-xl fade-in">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="bg-gray-800 p-6 rounded-lg card-hover">
+                    <h3 class="text-xl font-semibold text-white mb-2">Languages</h3>
+                    <p class="text-gray-400">C++, Python, SQL, HTML, JavaScript, Node.js</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg card-hover">
+                    <h3 class="text-xl font-semibold text-white mb-2">Frameworks/Tools</h3>
+                    <p class="text-gray-400">React.js, CSS, Genkit</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg card-hover">
+                    <h3 class="text-xl font-semibold text-white mb-2">Databases</h3>
+                    <p class="text-gray-400">MongoDB (NoSQL), SQL</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg card-hover">
+                    <h3 class="text-xl font-semibold text-white mb-2">Coursework</h3>
+                    <p class="text-gray-400">DSA, DBMS, OOP, AWS, OS, Computer Networks</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 fade-in">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden card-hover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Momentum AI: Stock Insights</h3>
+                        <p class="text-gray-400">A full-stack AI financial platform with Genkit agents for predictive analysis, news summarization, and user avatar generation. Features a responsive, dual-themed dashboard.</p>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden card-hover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">VIT Talk: Campus Connect</h3>
+                        <p class="text-gray-400">A social platform for over 1,000 students with secure login, chat, and event features. Increased student engagement by 70% and boosted performance by 60%.</p>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden card-hover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">The UnSubscriber</h3>
+                        <p class="text-gray-400">A subscription management dashboard using Next.js and React. Integrates an AI notification system with Google's Genkit for personalized renewal reminders.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Education & Certifications -->
+        <section id="education" class="py-20 fade-in">
+            <div class="grid md:grid-cols-2 gap-16">
+                 <div>
+                    <h2 class="text-3xl font-bold text-white mb-8 text-center md:text-left">Education</h2>
+                    <div class="bg-gray-800 p-6 rounded-lg card-hover">
+                         <h3 class="text-xl font-semibold text-indigo-400">Bachelor of Technology in Computer Science</h3>
+                         <p class="text-gray-300">VIT Bhopal University, Sehore, MP</p>
+                         <p class="text-gray-400">Sep 2022 - Present | CGPA: 8.85/10.0</p>
+                    </div>
+                 </div>
+                 <div>
+                     <h2 class="text-3xl font-bold text-white mb-8 text-center md:text-left">Certifications</h2>
+                     <div class="space-y-4">
+                        <div class="bg-gray-800 p-6 rounded-lg card-hover">
+                           <h3 class="text-xl font-semibold text-indigo-400">AWS Academy Graduate - Cloud Architecting</h3>
+                           <p class="text-gray-400">Engineered secure, scalable AWS solutions based on the Well-Architected Framework.</p>
+                        </div>
+                         <div class="bg-gray-800 p-6 rounded-lg card-hover">
+                           <h3 class="text-xl font-semibold text-indigo-400">Postman API Fundamentals Student Expert</h3>
+                           <p class="text-gray-400">Built and tested 15+ REST APIs with Postman, integrating lifecycle best practices.</p>
+                        </div>
+                     </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 text-center fade-in">
+            <h2 class="text-4xl font-bold text-white mb-4">Get In Touch</h2>
+            <p class="text-gray-300 mb-8 max-w-lg mx-auto">I'm currently seeking new opportunities. If you have a project in mind or just want to connect, feel free to reach out!</p>
+            <a href="mailto:stutiraghu72@gmail.com" class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg glow-button hover:bg-indigo-700 text-lg">
+                stutiraghu72@gmail.com
+            </a>
+            <p class="text-gray-400 mt-6">Bhopal, MP | +91 6265498990</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/50 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 Stuti Raghuwanshi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fade-in animation on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                 mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
